@@ -8,9 +8,22 @@ echo "| |                                                  "
 echo "|_|                                                  "
 echo "                                                     "
 sh -c 'mkdir -p /tmp/powrdrum/chef/cookbooks/pivotal_workstation && cd /tmp/powrdrum/chef/cookbooks/pivotal_workstation && curl -Ls http://github.com/jorbabe/pivotal_workstation/tarball/master | gunzip | tar xvf - --strip=1'
+
+which rvm
+RVM_INSTALLED=$?
+if [ $RVM_INSTALLED -ne 0 ];then
+  echo "Installing RVM"
+  bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+  echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
+  source ~/.bash_profile
+  rvm install ruby-1.9.2-p290
+else
+	echo "RVM already installed"
+fi
+
 which gem
-OUT=$?
-if [ $OUT -ne 0 ];then
+GEMS_INSTALLED=$?
+if [ $GEMS_INSTALLED -ne 0 ];then
   echo "Installing Rubygems..."
   cd /tmp/powrdrum
   curl -LOs http://production.cf.rubygems.org/rubygems/rubygems-1.6.2.tgz
@@ -20,5 +33,12 @@ else
 fi
 gem install soloist --no-ri --no-rdoc && gem install bundler --no-ri --no-rdoc
 cd /tmp/powrdrum && curl -O https://raw.github.com/jorbabe/powrdrum/master/soloistrc && soloist
-open https://github.com/jorbabe/powrdrum/raw/master/drummer.gif
-say -v Alex Dum dum dee dum dum dum dum dee Dum dum dee dum dum dum dum dee dum dee dum dum dum de dum dum dum dee dum dee dum dum dee dummmmmmmmmmmmmmmmm
+SOLOIST_SUCESS=$?
+
+if [ $SOLOIST_SUCESS -eq 0 ];then
+	open https://github.com/jorbabe/powrdrum/raw/master/drummer.gif
+	say -v Alex Dum dum dee dum dum dum dum dee Dum dum dee dum dum dum dum dee dum dee dum dum dum de dum dum dum dee dum dee dum dum dee dummmmmmmmmmmmmmmmm
+else
+   	say -v Alex O No
+	echo "FAIL."
+fi

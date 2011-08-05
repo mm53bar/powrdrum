@@ -9,7 +9,6 @@ recipes:
 - pivotal_workstation::textmate
 - pivotal_workstation::textmate_set_defaults
 - pivotal_workstation::mysql
-- pivotal_workstation::rvm
 - pivotal_workstation::postgres
 - pivotal_workstation::gem_no_rdoc_no_ri
 - pivotal_workstation::nginx
