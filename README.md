@@ -1,7 +1,4 @@
 ## Getting started
 
-Run the following commands:
-
-`sh -c 'mkdir -p /usr/local/src/workstation_bootstrap_tmp && cd /usr/local/src/workstation_bootstrap_tmp && curl -L https://github.com/jorbabe/workstation_bootstrap/tarball/master | gunzip | tar xvf - --strip=1'`
-
-`cd /usr/local/src/workstation_bootstrap_tmp && ruby bootstrap.rb`
+1.  Open Terminal
+2. Run this command: `curl -O https://raw.github.com/jorbabe/workstation_bootstrap/master/bootstrap.sh && chmod +x ./bootstrap.sh && ./bootstrap.sh`
