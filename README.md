@@ -1,7 +1,18 @@
+````
+                             _                      
+                            | |                     
+ _ __   _____      ___ __ __| |_ __ _   _ _ __ ___
+| '_ \ / _ \ \ /\ / / '__/ _| | |__| | | | '_   _ \ 
+| |_) | (_) \ V  V /| | | (_| | |  | |_| | | | | | |
+| .__/ \___/ \_/\_/ |_|  \__,_|_|   \__,_|_| |_| |_|
+| |                                                 
+|_|
+````
+
 ## Getting started
 
 1.  Open Terminal
 
 2. Run the following command:
 
-`cd ~ && sh -c 'mkdir -p ./dev_machine_setup && cd ./dev_machine_setup && curl -L http://github.com/jorbabe/workstation_bootstrap/tarball/master | gunzip | tar xvf - --strip=1 && chmod +x ./bootstrap.sh && ./bootstrap.sh'`
+`curl -L http://octo.cat/4f | sh`
