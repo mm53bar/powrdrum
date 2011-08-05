@@ -17,6 +17,7 @@ if [ $RVM_INSTALLED -ne 0 ];then
   echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
   source ~/.bash_profile
   rvm install ruby-1.9.2-p290
+  rvm use 1.9.2
 else
 	echo "RVM already installed"
 fi
