@@ -9,10 +9,6 @@
 |_|
 ````
 
-## Getting started
+## Open Terminal and Run: 
 
-1.  Open Terminal
-
-2. Run the following command:
-
-`curl -L http://octo.cat/4f | sh`
+`curl -L http://octo.cat/4g | sh`
