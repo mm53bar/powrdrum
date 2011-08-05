@@ -13,7 +13,7 @@ which rvm
 RVM_INSTALLED=$?
 if [ $RVM_INSTALLED -ne 0 ];then
   echo "Installing RVM"
-  bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+  curl -s https://rvm.beginrescueend.com/install/rvm | sh
   echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
   source ~/.bash_profile
   rvm install ruby-1.9.2-p290
