@@ -9,5 +9,5 @@ else
 fi
 gem install soloist --no-ri --no-rdoc && gem install bundler --no-ri --no-rdoc
 soloist
-open https://github.com/jorbabe/workstation_bootstrap
+open https://github.com/jorbabe/workstation_bootstrap/raw/master/drummer.gif
 say 'Now go buy Jordan a coffee and go write some code!'
